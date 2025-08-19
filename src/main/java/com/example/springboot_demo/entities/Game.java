@@ -15,13 +15,17 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // para que o id incremente quando um elemento for incluído na tabela
     private Long id;
     private String title;
+
     @Column(name = "game_year") // personaliza o nome da coluna no banco de dados
     private Integer year;
     private String genre;
     private String platforms;
     private Double score;
     private String imgUrl;
+    
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    @Column(columnDefinition = "TEXT") // instrução para gerar esse campo como um texto no banco de dados
     private String longDescription;
 
     public Game() {}
