@@ -11,6 +11,6 @@ FROM openjdk:21-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=build C:\Users\anapa\Documents\git\springboot-demo\target\springboot-demo-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /target/springboot-demo-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
